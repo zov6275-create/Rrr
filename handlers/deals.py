@@ -134,4 +134,4 @@ def register_deals(dp: Dispatcher):
     dp.register_message_handler(
         open_deal,
         commands=["start"]
-    )ж
+    )
