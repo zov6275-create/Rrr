@@ -34,7 +34,7 @@ async def main_menu(message: types.Message):
     reply_markup=keyboards.keyboard
     )
 
-    await message.answer('Главное меню⤵️                  ', reply_markup=keyboards.yes_or_no_2)
+    await message.answer('Главное меню⤵️                  ', reply_markup=keyboards.main_keyboard)
 
 
 # @dp.message_handler(lambda message: message.text == 'Меню')
@@ -45,7 +45,7 @@ async def main_menu_message_reply(message: types.Message):
     :param message: types.Message
     :return: None
     """
-    await message.answer('Главное меню⤵️                  ', reply_markup=keyboards.yes_or_no_2)
+    await message.answer('Главное меню⤵️                  ', reply_markup=keyboards.main_keyboard)
 
 
 # @dp.callback_query_handler(text='button19', state='*')
@@ -58,7 +58,7 @@ async def back_to_main_menu(callback_query: types.CallbackQuery, state: FSMConte
     :return: None
     """
     await callback_query.message.edit_text('Главное меню⤵️                  ')
-    await callback_query.message.edit_reply_markup(reply_markup=keyboards.yes_or_no_2)
+    await callback_query.message.edit_reply_markup(reply_markup=keyboards.main_keyboard)
     await state.finish()
 
 
