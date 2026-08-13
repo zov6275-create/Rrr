@@ -4,7 +4,9 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram import types
 
 
-# Главное меню
+# =====================
+# ГЛАВНОЕ МЕНЮ
+# =====================
 
 create_deal = InlineKeyboardButton(
     "💼 Создать сделку",
@@ -26,6 +28,11 @@ settings = InlineKeyboardButton(
     callback_data="settings"
 )
 
+history = InlineKeyboardButton(
+    "💾 История сделок",
+    callback_data="history"
+)
+
 support = InlineKeyboardButton(
     "☎️ Поддержка",
     callback_data="button5"
@@ -41,26 +48,41 @@ faq = InlineKeyboardButton(
     callback_data="button14"
 )
 
-history = InlineKeyboardButton(
-    "💾 История сделок",
-    callback_data="history"
-)
 
-
-# Клавиатура как в примере FunPay
+# Главное меню
 
 main_keyboard = InlineKeyboardMarkup(row_width=2)
 
-main_keyboard.add(create_deal)
-main_keyboard.add(my_requisites)
-main_keyboard.row(profile, settings)
-main_keyboard.add(history)
-main_keyboard.add(support)
-main_keyboard.add(about, faq)
+main_keyboard.row(
+    create_deal
+)
+
+main_keyboard.row(
+    my_requisites
+)
+
+main_keyboard.row(
+    profile,
+    settings
+)
+
+main_keyboard.row(
+    history
+)
+
+main_keyboard.row(
+    support
+)
+
+main_keyboard.row(
+    about,
+    faq
+)
 
 
-
-# Назад
+# =====================
+# НАЗАД В МЕНЮ
+# =====================
 
 back_main_menu = InlineKeyboardMarkup()
 
@@ -72,7 +94,9 @@ back_main_menu.add(
 )
 
 
-# Поддержка
+# =====================
+# ПОДДЕРЖКА / НАЗАД
+# =====================
 
 inline_kb9 = InlineKeyboardMarkup()
 
@@ -84,7 +108,9 @@ inline_kb9.add(
 )
 
 
-# Личный кабинет
+# =====================
+# НАЗАД В ПРОФИЛЬ
+# =====================
 
 back_to_personal_account = InlineKeyboardMarkup()
 
@@ -96,8 +122,9 @@ back_to_personal_account.add(
 )
 
 
-
-# Обычная кнопка Меню
+# =====================
+# ОБЫЧНАЯ КНОПКА МЕНЮ
+# =====================
 
 keyboard = types.ReplyKeyboardMarkup(
     resize_keyboard=True
