@@ -23,7 +23,7 @@ async def main_menu(message: types.Message):
     person_id = message.from_user.id
     new_sql.user_in_bd(person_id)
     await message.answer_photo(
-    photo="8965415545",
+    photo="AgACAgIAAxkBAAMVan1a9SKJZMelmdXkVu1947ZQ_DMAAhkXaxv5--lLBxhEUzSSTAoBAAMCAAN4AAM9BA",
     caption=
     f'👋 {hbold("Добро пожаловать!")}\n\n'
     f'💼 {hbold("Надёжный сервис для безопасных сделок!")}\n'
