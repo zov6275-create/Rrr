@@ -22,12 +22,15 @@ async def main_menu(message: types.Message):
     """
     person_id = message.from_user.id
     new_sql.user_in_bd(person_id)
-    await message.answer(f'🛡{hbold("Привет,", message.from_user.first_name, "!")}'
-                         f' Я-бот, который поможет провести безопасно внутриигровую сделку\n\n'
-                         f'🤔{hbold("Как мною пользоваться?")}\n\n'
-                         f'📝Выбирай один пункт ниже на клавиатуре и следуй инструкциям бота. Если возникнут проблемы '
-                         f'касаемо бота, ты всегда можешь написать поддержке в разделе "О нас"\n\n'
-                         f'Приятного пользования!✌️', reply_markup=keyboards.keyboard)
+    await message.answer(
+    f'👋 {hbold("Добро пожаловать!")}\n\n'
+    f'💼 {hbold("Надёжный сервис для безопасных сделок!")}\n'
+    f'✨ Автоматизировано, быстро и без лишних хлопот!\n\n'
+    f'🔹 Комиссия за услугу: {hbold("7%")}\n'
+    f'🔹 Поддержка 24/7: @твой_юзернейм\n\n'
+    f'💌 Теперь ваши сделки под защитой! 🛡️',
+    reply_markup=keyboards.keyboard
+    )
 
     await message.answer('Главное меню⤵️                  ', reply_markup=keyboards.yes_or_no_2)
 
