@@ -307,7 +307,11 @@ def register_main_menu(dispatcher: Dispatcher):
     :param dispatcher: Dispatcher
     :return: None
     """
-    dispatcher.register_message_handler(main_menu, commands=['start'])
+    dispatcher.register_message_handler(
+    main_menu,
+    commands=['start'],
+    state='*'
+    )
     dispatcher.register_message_handler(main_menu_message_reply, lambda message: message.text == 'Меню')
     dispatcher.register_callback_query_handler(back_to_main_menu, text='button19', state='*')
     dispatcher.register_callback_query_handler(personal_account, text='button16')
