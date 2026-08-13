@@ -17,10 +17,10 @@ logger.add(
 
 
 admin_menu.register_admin_menu(dp)
+deals.register_deals(dp)
 main_menu.register_main_menu(dp)
 buyer.register_buyer_handlers(dp)
 seller.register_seller_handlers(dp)
-deals.register_deals(dp)
 
 if __name__ == '__main__':
     executor.start_polling(
